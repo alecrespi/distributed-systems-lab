@@ -3,5 +3,21 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-  <display-name>Archetype Created Web Application</display-name>
+    <servlet>
+        <servlet-name>random.jsp</servlet-name>
+        <jsp-file>/random.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>CounterServlet</servlet-name>
+        <servlet-class>CounterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+       <servlet-name>random.jsp</servlet-name>
+       <url-pattern>/random/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CounterServlet</servlet-name>
+        <url-pattern>/counter/*</url-pattern>
+    </servlet-mapping>
 </web-app>
+
